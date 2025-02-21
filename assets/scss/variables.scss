@@ -1,0 +1,37 @@
+// PALETTE
+
+    //---Pink
+$pink:pink;
+$pale-pink:rgb(255, 234, 242);
+$dark-pink:rgb(202, 89, 168);
+$darker-pink:rgb(143, 104, 131);
+
+    //---Violet
+$pale-violet:rgba(212, 187, 206, 0.37);
+
+    //---Red
+$pale-red:#d18686;
+
+    //---Grey
+$pink-grey:rgb(185, 131, 169);
+
+
+// BODY
+$main-font:'Poppins';
+$body-background:$pale-violet;
+
+// INPUTS
+$input-outline:pink;
+$input-main:rgb(255, 234, 242);
+
+// BUTTONS
+
+$button-primary-background:$dark-pink;
+$button-secondary-background:$pink-grey;
+$button-warning-background: #ffc107;
+$button-danger-background: #dc3545;
+
+$button-primary-color: #fff;
+$button-secondary-color: #fff;
+$button-warning-color: #212529;
+$button-danger-color: #fff;

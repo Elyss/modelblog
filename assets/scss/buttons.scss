@@ -1,0 +1,158 @@
+@use "./variables.scss" as *;
+
+@mixin button($background, $color) {
+    background-color: $background;
+    color: $color;
+    border: 1px solid $background;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.65rem;
+    padding-right: 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 0.2rem;
+
+    span{
+        padding-top: 0.15rem;
+    }
+
+    &:hover {
+        background-color: darken($background, 10%);
+    }
+
+    i {
+        font-size: 1rem;
+        line-height: 1; // Ensures the icon is properly aligned with the text
+        vertical-align: middle; // Aligns the icon to the text baseline
+        display: inline-flex; // Ensures proper positioning inside flex elements
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+@mixin button-outline($background, $color) {
+    background-color: transparent;
+    color: $background;
+    border: 1px solid $background;
+    border-radius: 0.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.65rem;
+    padding-right: 0.75rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 0.2rem;
+
+
+
+    &:hover {
+        background-color: $background;
+        color: $color;
+    }
+
+    span{
+        padding-top: 0.15rem;
+    }
+
+
+    i{
+        font-size: 1rem;
+    }
+}
+
+@mixin button-discreet($background, $color) {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: $background;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.65rem;
+    padding-right: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 0.2rem;
+
+
+    &:hover {
+        background-color: transparent;
+        border: 1px solid $background;
+        color: $background;
+    }
+
+    span{
+        padding-top: 0.15rem;
+    }
+
+
+    i{
+        font-size: 1rem;
+    }
+}
+
+// Primary Button
+.btn-primary {
+    @include button($button-primary-background, $button-primary-color);
+}
+
+.btn-primary-outline {
+    @include button-outline($button-primary-background, $button-primary-color);
+}
+
+.btn-primary-discreet {
+    @include button-discreet($button-primary-background, $button-primary-color);
+}
+
+// Secondary Button
+.btn-secondary {
+    @include button($button-secondary-background, $button-secondary-color);
+}
+
+.btn-secondary-outline {
+    @include button-outline($button-secondary-background, $button-secondary-color);
+}
+
+.btn-secondary-discreet {
+    @include button-discreet($button-secondary-background, $button-secondary-color);
+}
+
+// Warning Button
+.btn-warning {
+    @include button($button-warning-background, $button-warning-color);
+}
+
+.btn-warning-outline {
+    @include button-outline($button-warning-background, $button-warning-color);
+}
+
+.btn-warning-discreet {
+    @include button-discreet($button-warning-background, $button-warning-color);
+}
+
+// Danger Button
+.btn-danger {
+    @include button($button-danger-background, $button-danger-color);
+}
+
+.btn-danger-outline {
+    @include button-outline($button-danger-background, $button-danger-color);
+}
+
+.btn-danger-discreet {
+    @include button-discreet($button-danger-background, $button-danger-color);
+}
