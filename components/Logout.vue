@@ -7,7 +7,13 @@ import { ref, computed } from "vue";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
-const isAuthenticated = computed(() => !!localStorage.getItem("token"));
+const token = ref(null)
+onMounted(() => {
+    // This will only run on the client
+    token.value = localStorage.getItem("token")
+})
+const isAuthenticated = computed(() => !!token.value);
+
 
 const logout = () => {
     localStorage.removeItem("token"); // ✅ Remove token

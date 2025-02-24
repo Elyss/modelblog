@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="main-app">
     <NuxtRouteAnnouncer />
     <NuxtPage />
   </div>
@@ -13,8 +13,15 @@
 body{
   font-family:$main-font;
   background-color: $body-background;
-  a{
-    text-decoration: none;
+  margin:0;
+  padding: 0;
+}
+a, a:visited{
+  text-decoration: none;
+  color: $link-primary;
+
+  &:hover{
+    color: $link-visited;
   }
 }
 
@@ -36,7 +43,23 @@ input{
   padding-left: 0.5rem;
   &:focus{
       outline-color: $input-outline;
+      outline:2px solid $input-outline;
     }
+}
+
+
+.material-icons{
+    font-size: 1rem;
+    line-height: 1; // Ensures the icon is properly aligned with the text
+    vertical-align: middle; // Aligns the icon to the text baseline
+    display: inline-flex; // Ensures proper positioning inside flex elements
+    align-items: center;
+    justify-content: center;
+}
+
+.main-app{
+  max-width: 1000px;
+  margin: auto;
 }
 
 </style>

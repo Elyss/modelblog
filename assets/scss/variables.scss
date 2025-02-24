@@ -1,24 +1,29 @@
 // PALETTE
 
     //---Pink
-$pink:pink;
+$pink:#ffaab8;
 $pale-pink:rgb(255, 234, 242);
+$very-pale-pink:rgb(255, 248, 251);
 $dark-pink:rgb(202, 89, 168);
 $darker-pink:rgb(143, 104, 131);
 
     //---Violet
-$pale-violet:rgba(212, 187, 206, 0.37);
-
+$pale-violet:#efe5ec;
+$violet:#551a8b;
     //---Red
 $pale-red:#d18686;
 
     //---Grey
 $pink-grey:rgb(185, 131, 169);
 
+    //---Green
+$green:#85CECE;
+$dark-green:#4B8C92;
+$dker-green:#3B4140;
 
 // BODY
 $main-font:'Poppins';
-$body-background:$pale-violet;
+$body-background:$very-pale-pink;
 
 // INPUTS
 $input-outline:pink;
@@ -35,3 +40,7 @@ $button-primary-color: #fff;
 $button-secondary-color: #fff;
 $button-warning-color: #212529;
 $button-danger-color: #fff;
+
+// LINKS
+$link-primary:$green;
+$link-visited:$link-primary;

@@ -9,5 +9,9 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/material-icons@1.13.14/iconfont/material-icons.min.css' },
       ]
     }
+  },
+  devServer: {
+    host: '0.0.0.0', // Listens on all interfaces
+    port: 3000       // You can change this port if needed
   }
 })
